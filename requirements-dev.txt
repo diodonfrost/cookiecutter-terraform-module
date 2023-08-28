@@ -1,0 +1,2 @@
+cookiecutter == 2.*
+tox == 4.*
