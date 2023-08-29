@@ -1,0 +1,9 @@
+{
+  "module_name": "my_module",
+  "module_description": "my terraform module description",
+  "author": "diodonfrost",
+  "terraform_required_version": ">= 1.3.0",
+  "terraform_provider": ["aws", "google", "azurerm", "other"],
+  "license": ["Apache Software License 2.0", "BSD-3", "GNU GPL v3.0", "MIT", "Mozilla Public License 2.0"],
+  "dev_container": [true, false]
+}
