@@ -32,7 +32,11 @@
       "installTFsec": true,
       "installTerraformDocs": true
     },
+    {%- if cookiecutter.terraform_provider == "aws" %}
     "ghcr.io/devcontainers/features/aws-cli:1": {},
+    {%- elif cookiecutter.terraform_provider == "azure" %}
+    "ghcr.io/devcontainers/features/azure-cli:1": {},
+    {%- endif %}
     "ghcr.io/devcontainers/features/go:1": {}
   },
   "postStartCommand": "cd tests/end-to-end && go get ./...",
