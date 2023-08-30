@@ -35,23 +35,20 @@ def remove_unneeded_files() -> None:
 
     if project_licenses == "Apache Software License 2.0":
         shutil.move(os.path.join("_licenses", "Apache-2"), "LICENSE")
-        remove_file_or_directory("_licenses")
 
     if project_licenses == "BSD-3":
         shutil.move(os.path.join("_licenses", "BSD-3"), "LICENSE")
-        remove_file_or_directory("_licenses")
 
     if project_licenses == "GNU GPL v3.0":
         shutil.move(os.path.join("_licenses", "GPL-3"), "LICENSE")
-        remove_file_or_directory("_licenses")
 
     if project_licenses == "MIT":
         shutil.move(os.path.join("_licenses", "MIT"), "LICENSE")
-        remove_file_or_directory("_licenses")
 
     if project_licenses == "Mozilla Public License 2.0":
         shutil.move(os.path.join("_licenses", "Mozilla-2.0"), "LICENSE")
-        remove_file_or_directory("_licenses")
+
+    remove_file_or_directory("_licenses")
 
 
 if __name__ == "__main__":
