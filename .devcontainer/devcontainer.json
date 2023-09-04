@@ -4,7 +4,6 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "redhat.ansible",
         "redhat.vscode-yaml",
         "isudox.vscode-jetbrains-keybindings",
         "vscode-icons-team.vscode-icons",
