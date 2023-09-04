@@ -1,7 +1,7 @@
 terraform {
   required_version = "{{ cookiecutter.terraform_required_version }}"
-  {%- if cookiecutter.terraform_provider != "other" %}
   required_providers {
+  {%- if cookiecutter.terraform_provider != "other" %}
     {%- if cookiecutter.terraform_provider == "aws" %}
     aws = {
       source  = "hashicorp/aws"
@@ -18,6 +18,10 @@ terraform {
       version = ">= 4.0"
     }
     {%- endif %}
+    {%- endif %}
+    random = {
+      source  = "hashicorp/random"
+      version = "3.5.1"
+    }
   }
-  {%- endif %}
 }
