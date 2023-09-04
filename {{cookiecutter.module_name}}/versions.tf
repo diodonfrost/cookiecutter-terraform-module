@@ -5,17 +5,17 @@ terraform {
     {%- if cookiecutter.terraform_provider == "aws" %}
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 5.0"
+      version = ">= 5.0.0"
     }
     {%- elif cookiecutter.terraform_provider == "azurerm" %}
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 3.0"
+      version = ">= 3.0.0"
     }
     {%- elif cookiecutter.terraform_provider == "google" %}
     google = {
       source  = "hashicorp/google"
-      version = ">= 4.0"
+      version = ">= 4.0.0"
     }
     {%- endif %}
   }
