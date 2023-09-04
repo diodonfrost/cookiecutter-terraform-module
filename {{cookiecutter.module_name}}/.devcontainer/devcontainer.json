@@ -1,7 +1,11 @@
 {
   "build": { "dockerfile": "Dockerfile", "context": "../" },
   "mounts": [
+    {%- if cookiecutter.terraform_provider == "aws" %}
     "source=${localEnv:HOME}/.aws,target=/home/vscode/.aws,type=bind,consistency=cached"
+    {%- elif cookiecutter.terraform_provider == "azurerm" %}
+    "source=${localEnv:HOME}/.azure,target=/home/vscode/.azure,type=bind,consistency=cached"
+    {%- endif %}
   ],
 
   "customizations": {
@@ -34,7 +38,7 @@
     },
     {%- if cookiecutter.terraform_provider == "aws" %}
     "ghcr.io/devcontainers/features/aws-cli:1": {},
-    {%- elif cookiecutter.terraform_provider == "azure" %}
+    {%- elif cookiecutter.terraform_provider == "azurerm" %}
     "ghcr.io/devcontainers/features/azure-cli:1": {},
     {%- endif %}
     "ghcr.io/devcontainers/features/go:1": {}
