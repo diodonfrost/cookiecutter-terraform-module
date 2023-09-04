@@ -39,7 +39,7 @@
     {%- endif %}
     "ghcr.io/devcontainers/features/go:1": {}
   },
-  "postStartCommand": "cd tests/end-to-end && go get ./...",
+  "postStartCommand": "cd tests/terratest && go get ./...",
   "remoteEnv": { "PATH": "${containerEnv:PATH}:/home/vscode/.local/bin" },
   "remoteUser": "vscode"
 }
