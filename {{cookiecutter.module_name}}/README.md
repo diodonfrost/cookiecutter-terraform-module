@@ -9,28 +9,27 @@ module "{{ cookiecutter.module_name }}" {
   source = ""
 ```
 
-## Examples
-
-## Inputs
-
-## Outputs
+<!-- BEGIN_TF_DOCS -->
+<!-- END_TF_DOCS -->
 
 ## Tests
 
-Some of these tests create real resources. That means they cost money to run, especially if you don't clean up after yourself. Please be considerate of the resources you create and take extra care to clean everything up when you're done!
+Some of these tests create real resources in an Azure subscription. That means they cost money to run, especially if you don't clean up after yourself. Please be considerate of the resources you create and take extra care to clean everything up when you're done!
+
+In order to run tests that access your Azure subscription, run 'azure login'
 
 ### End-to-end tests
 
-This module has been packaged with [Terratest](https://github.com/gruntwork-io/terratest) to tests this Terraform module.
-
-Install Terratest with depedencies:
+#### Terraform test
 
 ```shell
-# Prerequisite: install Go
-cd tests/end-to-end/ && go get ./...
+# Test basic terraform deployment
+cd examples/simple
+terraform test -verbose
 
-# Test simple scenario
-go test -timeout 30m -v simple_test.go
+# Test postgresql scheduler
+cd examples/postgresql_scheduler
+terraform test -verbose
 ```
 
 ## Authors

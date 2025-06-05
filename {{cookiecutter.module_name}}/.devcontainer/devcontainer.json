@@ -38,9 +38,8 @@
     {%- elif cookiecutter.terraform_provider == "azurerm" %}
     "ghcr.io/devcontainers/features/azure-cli:1": {},
     {%- endif %}
-    "ghcr.io/devcontainers/features/go:1": {}
+    "ghcr.io/devcontainers/features/node:1": {}
   },
-  "postStartCommand": "cd tests/terratest && go get ./...",
   "remoteEnv": { "PATH": "${containerEnv:PATH}:/home/vscode/.local/bin" },
   "remoteUser": "vscode"
 }

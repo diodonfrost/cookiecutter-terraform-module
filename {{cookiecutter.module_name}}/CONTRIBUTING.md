@@ -10,7 +10,7 @@ As a contributor, here are the guidelines we would like you to follow:
 ## <a name="rules"></a> Coding Rules
 To ensure consistency throughout the source code, keep these rules in mind as you are working:
 
-* All features or bug fixes **must be tested** by one or more specs (terratest).
+* All features or bug fixes **must be tested** by one or more specs (terraform test).
 * All new Terraform variables or outputs **must be documented** in README.md meta-argument description.
 * We follow [conventionnal-commit](https://www.conventionalcommits.org/en/v1.0.0/)
 
